@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Bank bank = new Bank();
+
         ATM atm = new ATM();
 
         Scanner sc = new Scanner(System.in);
@@ -12,7 +12,9 @@ public class Main {
         System.out.println("enter pin:");
         String pin = sc.nextLine();
 
+
         User p1 = new User(cardNumber, pin);
+        //User JaneDoe = new User(cardNumber, pin);
         atm.login(p1);
         atm.menu();
         }

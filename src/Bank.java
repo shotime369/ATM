@@ -1,8 +1,9 @@
 public class Bank {
 
-    static int balance = 250;
+    private static int balance = 250;
 
     public static boolean verify(String cardNumber, String pin) {
+        //simulate pulling from the banks database of customers
         String validCardNumber = "123456789";
         String validPin = "1234";
         return cardNumber.equals(validCardNumber) && pin.equals(validPin);

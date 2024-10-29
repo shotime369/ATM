@@ -10,7 +10,6 @@ public class ATM {
             System.out.println("Login failed. Invalid card number or PIN.");
         }
     }
-
     public void menu(){
         Scanner sc=new Scanner(System.in);
         String choice;
