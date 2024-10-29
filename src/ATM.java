@@ -46,7 +46,6 @@ public class ATM {
         System.out.println("Your new balance is:"+ Bank.checkBalance());
         menu();
     }
-
     public void deposit() {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter amount to deposit: ");

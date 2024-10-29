@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         //Bank bank = new Bank();
         ATM atm = new ATM();
-        //sout
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Card entered");
         String cardNumber = "123456789";
