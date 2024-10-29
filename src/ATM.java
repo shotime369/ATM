@@ -49,9 +49,14 @@ public class ATM {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter amount to deposit: ");
         int amount= Integer.parseInt(sc.nextLine());
-        Bank.deposit(amount);
-        Bank.deposit();
+        if (amount == 0) {
+            Bank.deposit();
+        }
+        else {
+            Bank.deposit(amount);
+        }
         menu();
     }
     }
+
 

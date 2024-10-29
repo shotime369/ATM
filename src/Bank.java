@@ -15,6 +15,7 @@ public class Bank {
 
     public static void deposit(int amount){
         balance += amount;
+        System.out.println("Your new balance is:"+ Bank.checkBalance());
     }
     public static void withdraw(int amount){
         balance -= amount;
@@ -34,4 +35,6 @@ public class Bank {
            System.out.println("Withdraw successful");
        }
     }
+
+
 }
