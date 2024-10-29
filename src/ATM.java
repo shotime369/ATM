@@ -14,7 +14,7 @@ public class ATM {
     public void menu(){
         Scanner sc=new Scanner(System.in);
         String choice;
-        System.out.println("Choose 1-4: \n 1: Check Balance \n 2: Withdraw \n 3: Exit");
+        System.out.println("Choose 1-4: \n 1: Check Balance \n 2: Withdraw \n 3: Deposit \n 4: Exit");
         choice = sc.nextLine();
         switch (choice) {
             case "1" -> {
@@ -27,6 +27,10 @@ public class ATM {
                 withdraw();
             }
             case "3" -> {
+                System.out.println("Deposit");
+                deposit();
+            }
+            case "4" -> {
                 System.out.println("Exit");
                 System.exit(0);
             }
@@ -38,7 +42,17 @@ public class ATM {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter amount to withdraw: ");
         String amount=sc.nextLine();
-        Bank.verifyBalance(amount);
+        Bank.verifyBalance(Integer.parseInt(amount));
+        System.out.println("Your new balance is:"+ Bank.checkBalance());
+        menu();
+    }
+
+    public void deposit() {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter amount to deposit: ");
+        int amount= Integer.parseInt(sc.nextLine());
+        Bank.deposit(amount);
+        Bank.deposit();
         menu();
     }
     }

@@ -1,5 +1,7 @@
 public class Bank {
 
+    static int balance = 250;
+
     public static boolean verify(String cardNumber, String pin) {
         String validCardNumber = "123456789";
         String validPin = "1234";
@@ -7,15 +9,27 @@ public class Bank {
     }
 
     public static int checkBalance(){
-     return 250;
+        return balance;
     }
 
-    public static void verifyBalance(String amount){
+    public static void deposit(int amount){
+        balance += amount;
+    }
+    public static void withdraw(int amount){
+        balance -= amount;
+    }
+
+    public static void deposit(){
+        System.out.println("you have not deposited any notes\n your balance is:" + checkBalance());
+    }
+
+    public static void verifyBalance(int amount){
        int balance=checkBalance();
-       if (balance<Integer.parseInt(amount)){
+       if (balance<(amount)){
            System.out.println("Not enough balance");
        }
-       else if (balance>=Integer.parseInt(amount)){
+       else {
+           withdraw(amount);
            System.out.println("Withdraw successful");
        }
     }
